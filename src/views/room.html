@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+    <head>
+        <title>Rocket.Q -Perguntas e respostas</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!--View Port-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles/global.css">
+        <link rel="stylesheet" href="styles/room.css">
+        <link rel="stylesheet" href="styles/modal.css">
+
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="room" class="content">
+            <header>
+                <a href="#">
+                    <img src="images/logo-nlw.svg.svg" alt="Rocket.Q Logo"/>
+                </a>
+                <div class="buttons">
+
+                    <div class="button outlined">
+                    #323243
+                        <img src="images/copy-1.svg" alt="Copiar número de sala"/>
+                    </div>
+
+                    <a href="#" class="button">
+                        <img src="images/usersWhite.svg" alt="Criar uma sala">
+                    Criar sala
+                    </a>
+                </div>
+            </header>
+            <main>
+                <section id="question-form">
+                    <h2>Faça sua pergunta</h2>
+                    <form action="">
+                        <label class="sr-only" for-id="question">O que você quer perguntar?</label>
+                        <textarea name="question" id="question" placeholder="O que você quer perguntar?"></textarea>
+                        <footer>
+                            <div>
+                                <img src="images/Vector.svg" alt="cadeado">
+                                Esta pergunta é anônima!
+                            </div>
+                            <button>Enviar</button>
+                        </footer>
+                    </form>
+                </section>
+                <section id="question">
+                    <h2 class="sr-only">Perguntas da comunidade</h2>
+
+                    <div class="questions">
+                        
+                        <div class="question-wrapper">
+                            <div class="question-content">
+                                <div class="user">
+                                    <img src="images/userSimple.svg" alt="Avatar" >
+                                </div>
+                                <div class="question">
+                                    <p>Qual a diferença entre 'const', 'var' e 'let' em JavaScipt?</p>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <a href="#!" class="check">
+                                    <img src="/images/checkNotRead.svg" alt="Check">
+                                    Marcar como lida
+                                </a>
+                                <a href="#" class="delete">
+                                    <img src="/images/trash1.svg" alt="Trash">
+                                    Excluir
+                                </a>
+                            </div>
+                        </div>
+                        <div class="question-wrapper">
+                            <div class="question-content">
+                                <div class="user">
+                                    <img src="images/userSimple.svg" alt="Avatar" >
+                                </div>
+                                <div class="question">
+                                    <p>O que é JavaScipt?</p>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <a href="#" class="check">
+                                    <img src="/images/checkNotRead.svg" alt="Check">
+                                    Marcar como lida
+                                </a>
+                                <a href="#" class="delete">
+                                    <img src="/images/trash1.svg" alt="Trash">
+                                    Excluir
+                                </a>
+                            </div>
+                        </div>
+                        <div class="question-wrapper">
+                            <div class="question-content">
+                                <div class="user">
+                                    <img src="images/userSimple.svg" alt="Avatar" >
+                                </div>
+                                <div class="question">
+                                    <p>Quando você acorda pela manhã, pensa em algo que possa te ajudar a melhorar, não só como um dev, mas também como um ser humano? Se sim, explique o motivo e quais são os seus atos para promover essa mudança. Se não, explique o motivo para não querer e/ou não querer essa mudança.</p>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <a href="#" class="check">
+                                    <img src="/images/checkNotRead.svg" alt="Check">
+                                    Marcar como lida
+                                </a>
+                                <a href="#" class="delete">
+                                    <img src="/images/trash1.svg" alt="Trash">
+                                    Excluir
+                                </a>
+                            </div>
+                        </div>
+                        <div class="question-wrapper read">
+                            <div class="question-content">
+                                <div class="user">
+                                    <img src="images/userSimple.svg" alt="Avatar" >
+                                </div> 
+                                <div class="question">
+                                    <p>O que é TypeScipt?</p>
+                                </div>
+                            </div>
+
+                            <div class="actions">
+                                <a href="#" class="check">
+                                    <img src="images/check1.svg" alt="Check">
+                                    <!-- <img src="images/check1.svg" alt="Check"> -->
+                                    Pergunta lida
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- MODAL -->
+        <div class="modal-wrapper active">
+            <div class="modal">
+                <h2>Excluir pergunta</h2>
+                <p>Tem certeza que você deseja excluir essa pergunta?</p>
+
+                <form action="#" >
+                    <label class="sr-only" for-id="password">Digite a sua senha admin</label>
+                    <input type="password" id="password"name="password" placeholder="Digite a sua senha"/>
+
+                    <div class="buttons">
+                        <div class="button grey">Cancelar</div>
+                        <button class="red">Sim, excluir</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html> 
