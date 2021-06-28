@@ -8,9 +8,9 @@ const modalButton = document.querySelector('.modal button');
 
 
 //Pegar todos os botões que existe com a classe check
-const checkButtons = document.querySelectorAll(".actions a.check")
+const checkButtons = document.querySelectorAll(".actions a.check");
 
-console.log(checkButtons)
+console.log(checkButtons);
  
 checkButtons.forEach(button =>{
     //adicionar a escuta
@@ -20,13 +20,19 @@ checkButtons.forEach(button =>{
 
 
 // Quando o botão delete for clicado ele abre a modal
-const deleteButton = document.querySelectorAll(".actions a.delete")
+const deleteButton = document.querySelectorAll(".actions a.delete");
 
 deleteButton.forEach(button =>{
     button.addEventListener("click", (event) => handleClick(event, false));
 
 })
 function handleClick(event, check = true){
-    modalTitle.innerHTML = check ? "Marcar como lida" : "Excluir essa pergunta"
-    modal.open()
+    event.preventDefault();
+    const text = check ? "Marcar como lida" : "Excluir";
+
+    modalTitle.innerHTML = `${text} esta pergunta?`;
+    modalDescription.innerHTML = `Tem certeza que deseja ${text.toLocaleLowerCase()} esta pergunta?`;
+    modalButton.innerHTML= `Sim, ${text.toLocaleLowerCase()}`;
+    check ? modalButton.classList.remove("red") : modalButton.classList.add("red")
+    modal.open();
 }
