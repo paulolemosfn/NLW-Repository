@@ -10,7 +10,7 @@ const modalButton = document.querySelector('.modal button');
 //Pegar todos os botões que existe com a classe check
 const checkButtons = document.querySelectorAll(".actions a.check");
 
-console.log(checkButtons);
+// console.log(checkButtons);
  
 checkButtons.forEach(button =>{
     //adicionar a escuta
@@ -34,11 +34,13 @@ function handleClick(event, check = true){
     const questionId = event.target.dataset.id;
 
     const form= document.querySelector('.modal form');
-    form.querySelector("action", `/room/${roomId}/${questionId}/${slug}`);
+    form.setAttribute("action", `/question/${roomId}/${questionId}/${slug}`);
 
     modalTitle.innerHTML = `${text} esta pergunta?`;
-    modalDescription.innerHTML = `Tem certeza que deseja ${text.toLocaleLowerCase()} esta pergunta?`;
-    modalButton.innerHTML= `Sim, ${text.toLocaleLowerCase()}`;
+    modalDescription.innerHTML = `Tem certeza que deseja ${text.toLowerCase()} esta pergunta?`;
+    modalButton.innerHTML= `Sim, ${text.toLowerCase()}`;
     check ? modalButton.classList.remove("red") : modalButton.classList.add("red")
+
+    
     modal.open();
 }
