@@ -16,7 +16,7 @@ const initDb={
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             titulo TEXT,
             check INT
-        )`);/*PRIMARY KEY é o comando que garante que o id solicitado vai ser unico*/
+        )`);/*PRIMARY KEY é o comando que garante que o id solicitado vai ser único*/
     }
 }
 
