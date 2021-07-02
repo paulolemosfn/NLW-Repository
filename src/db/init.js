@@ -15,8 +15,10 @@ const initDb={
         await db.exec(`CREATE TABLE questions(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             titulo TEXT,
-            check INT
+            read INT
         )`);/*PRIMARY KEY é o comando que garante que o id solicitado vai ser único*/
+
+        await db.close(); 
     }
 }
 
