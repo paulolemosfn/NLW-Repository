@@ -30,6 +30,7 @@ module.exports = {
 
 
         while (isRoom){
+            /*Define o numero da sala*/
             for (let i = 0; i < 6; i++) {
                 i == 0 ? roomId = Math.floor(Math.random() * 10).toString() :
                 roomId += Math.floor(Math.random() * 10).toString();
