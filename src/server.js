@@ -1,6 +1,7 @@
 const express = require('express');
 const route= require('./route');
 const path = require('path');
+require('dotenv').config();
 
 const server = express();
 
@@ -14,4 +15,4 @@ server.use(express.urlencoded({extended:true})); /*midware, está implcito entre
 
 server.use(route);
 
-server.listen(3000, ()=> console.log('Estou rodando!'));
+server.listen(process.env.PORT, ()=> console.log('Estou rodando!'));

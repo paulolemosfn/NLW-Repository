@@ -1,4 +1,5 @@
 const Database= require('./config');
+require('dotenv').config();
 
 const initDb={
     async init(){
