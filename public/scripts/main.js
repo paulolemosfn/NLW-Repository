@@ -15,7 +15,6 @@ const checkButtons = document.querySelectorAll(".actions a.check");
 checkButtons.forEach(button =>{
     //adicionar a escuta
     button.addEventListener("click",handleClick);
-    
 })
 
 

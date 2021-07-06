@@ -13,10 +13,11 @@ const initDb={
         )`);  
         /*Comandos na linguagem do SQL sempre são em LETRA MAIÚSCULA  */
 
-        await db.exec(`CREATE TABLE questions(
+        await db.exec(`CREATE TABLE questions (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            titulo TEXT,
-            read INT
+            title TEXT,
+            read INT, 
+            room INT
         )`);/*PRIMARY KEY é o comando que garante que o id solicitado vai ser único*/
 
         await db.close(); 
